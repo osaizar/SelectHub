@@ -1,0 +1,164 @@
+<!DOCTYPE HTML>
+<!--
+	Stellar by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+	<title>SelectBucket</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+</head>
+<body>
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<header id="header" class="alt">
+			<span class="logo"><i class="fa fa-5x fa-table" aria-hidden="true"></i></span>
+			<h1>SelectBucket</h1>
+			<p>Just another non-free, software comparison site<br>
+				built by Mondragon Unibertsitatea Students.</p>
+			</header>
+
+			<!-- Nav -->
+			<nav id="nav">
+				<ul>
+					<li><a href="/" class="active">Inicio</a></li>
+				</ul>
+			</nav> 
+
+			<!-- Main -->
+			<div id="main">
+			
+			<form class="form-horizontal"  style="padding: 8px;">
+<fieldset>
+
+<!-- Form Name -->
+<legend>¿Necesita un Servicio a Medida? Contacta con Nosotros</legend>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">Nombre</label>  
+  <div class="col-md-4">
+  <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">E-Mail</label>  
+  <div class="col-md-4">
+  <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">Telefono</label>  
+  <div class="col-md-4">
+  <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+    
+  </div>
+</div>
+
+<!-- Textarea -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textarea">Mensaje</label>
+  <div class="col-md-4">                     
+    <textarea class="form-control" id="textarea" name="textarea">Explica brevemente lo que necesitas.</textarea>
+  </div>
+</div>
+
+<!-- Button (Double) -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="button1id"></label>
+  <div class="col-md-8">
+    <button id="button1id" name="button1id" class="btn btn-success">Enviar</button>
+    <button id="button2id" name="button2id" class="btn btn-danger">Solicitar Llamada</button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+
+
+			</div> <!-- MAIN -->
+
+			<!-- Footer -->
+			<footer id="footer">
+				<section>
+					<h2>¿Quienes Somos?</h2>
+					<p>En este proyecto proponemos un sistema de selección de software para empresas. Este sistema ayudará a comparar distintos softwares para varios tipos de necesidades, analizando los puntos positivos y negativos de cada uno ayudando así a elegir el software que más se ajuste a las necesidades de la empresa. </p>
+					<ul class="actions">
+						<li><a href="generic.html" class="button">Learn More</a></li>
+					</ul>
+				</section>
+				<section>
+					<h2>¿Donde Estamos?</h2>
+					<dl class="alt">
+						<dt>Dirección</dt>
+						<dd>Uribe Auzoa &bull; Arrasate, 20500 &bull; Euskadi</dd>
+						<dt>Phone</dt>
+						<dd>943 27 26 25</dd>
+						<dt>Email</dt>
+						<dd><a href="#">info@selectbucket.com</a></dd>
+					</dl>
+					<ul class="icons">
+						<li><a href="#" class="icon fa-twitter alt"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon fa-facebook alt"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon fa-instagram alt"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon fa-github alt"><span class="label">GitHub</span></a></li>
+						<li><a href="#" class="icon fa-dribbble alt"><span class="label">Dribbble</span></a></li>
+					</ul>
+				</section>
+				<p class="copyright">&copy; SelectBucket, 2017.</p>
+			</footer>
+
+		</div>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/skel.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+		<script src="assets/js/main.js"></script>
+
+		<script>
+		$('.proton').hide();
+		$('.yandex').hide();
+
+		function onSelectProvider(){
+			var e = document.getElementById("providerselect");
+			var selected = e.options[e.selectedIndex].value;
+			if(selected == "null"){
+				//NADA
+			}else if(selected == "0"){
+				showProton();
+			}else if(selected == "1"){
+				showYandex();
+			}
+		}
+
+		function showYandex(){
+			$('.yandex').show();
+		}
+
+		function showProton(){
+			$('.proton').show();
+		}
+
+		</script>
+
+
+	</body>
+	</html>
