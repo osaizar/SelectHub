@@ -3358,6 +3358,7 @@
 		background-color: #ffffff;
 		color: #636363;
 		border-radius: 0.25em;
+		overflow-x: auto;
 	}
 
 		#main input, #main select, #main textarea {
