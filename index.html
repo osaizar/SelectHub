@@ -13,6 +13,12 @@
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+			<style>
+			
+.feat {
+	background-color: rgba(0, 205, 0, 0.5);
+}
+		</style>
 </head>
 <body>
 
@@ -40,7 +46,7 @@
 			<div id="main">
 			</br>
 
-<div class="col-xs-5 selectContainer">
+<div class="col-xs-5 selectContainer" style="padding: 16px;">
             <select id="providerselect" class="form-control" name="size">
                 <option value="null">Añadir producto a la tabla</option>
                 <option value="0">ProtonMail</option>
@@ -57,14 +63,16 @@
 					<table class="table">
 						<tr>
 							<th><!-- EMPTY --></th>
+							<th class="feat"><h2>Featured</h2></th>
 							<th><i class="fa fa-3x fa-star" style="color: yellow;" aria-hidden="true"></i> Rank 1</th>
 							<th><i class="fa fa-2x fa-star" style="color: grey;" aria-hidden="true"></i> Rank 2</th>
 							<th><i class="fa fa-star" style="color: brown;" aria-hidden="true"></i> Rank 3</th>
-							<th class="proton">Rank 4</th>
-							<th class="yandex">Rank 5</th>
+							<th class="proton">Rank 4 <i onclick="hideProton()" class="fa fa-times" style="color: red;" aria-hidden="true"></i></th>
+							<th class="yandex">Rank 5 <i onclick="hideYandex()" class="fa fa-times" style="color: red;" aria-hidden="true"></i></th>
 						</tr>
 						<tr>
 							<td><!-- EMPTY --></td>
+							<td class="feat"><img src="images/msn.png" width="50px" height="50px" alt=""></td>
 							<td><img src="images/gmail.png" width="50px" height="50px" alt=""></td>
 							<td><img src="images/outlook.png" width="50px" height="50px" alt=""></td>
 							<td><img src="images/icloud.png" width="50px" height="50px" alt=""></td>
@@ -73,6 +81,7 @@
 						</tr>
 						<tr>
 							<td><!-- EMPTY --></td>
+							<td class="feat">Messenger</td>
 							<td>GMail</td>
 							<td>Outlook.com</td>
 							<td>iCloud</td>
@@ -81,6 +90,7 @@
 						</tr>
 						<tr>
 							<td id="general">Dueño</td>
+							<td class="feat">Microsoft</td>
 							<td>Google Inc</td>
 							<td>Microsoft</td>
 							<td>Apple</td>
@@ -89,6 +99,7 @@
 						</tr>
 						<tr>
 							<td>Creación</td>
+							<td class="feat">2001 - 2010</td>
 							<td>2004, Abr</td>
 							<td>1996, Jul (Hotmail)</br>2012, Jul (Outlook)</td>
 							<td>2011, Oct</td>
@@ -97,6 +108,7 @@
 						</tr>
 						<tr>
 							<td>Coste</td>
+							<td class="feat">Gratis</td>
 							<td>Gratis (Anuncios)</br>$5/usuario/mes dominio del usuario</td>
 							<td>Gratis (Anuncios)</br>Opción de Pago</td>
 							<td>0$ o $0.99/mes,</br>$3.99/mes,</br>$9.99/mes</br>o $19.99/mes</td>
@@ -105,6 +117,7 @@
 						</tr>
 						<tr>
 							<td>Almacenamiento</td>
+							<td class="feat">No tenía</td>
 							<td>15Gb</td>
 							<td>Ilimitado</td>
 							<td>5 GB (Gratis), 20, 200, 500 GB</br>o 1 TB monthly</td>
@@ -113,6 +126,7 @@
 						</tr>
 						<tr>
 							<td>Límite Adjuntos</td>
+							<td class="feat">Sín Límite</td>
 							<td>25 Mb</br>10GB a traves de Drive</td>
 							<td>25 Mb</br>Sin Límite a traves de OneDrive</td>
 							<td>20 MB</br>(5GB por mensaje con Mail Drop)</td>
@@ -121,6 +135,7 @@
 						</tr>
 						<tr>
 							<td>Idiomas</td>
+							<td class="feat">5</td>
 							<td>71</td>
 							<td>106</td>
 							<td>4</td>
@@ -129,6 +144,7 @@
 						</tr>
 						<tr id="compatibilidad">
 							<td>Soporte POP3</td>
+							<td class="feat"><i class="fa fa-times" style="color: red;" aria-hidden="true"></i></td>
 							<td><i class="fa fa-check" style="color: green;" aria-hidden="true"></i></td>
 							<td><i class="fa fa-check" style="color: green;" aria-hidden="true"></i></td>
 							<td><i class="fa fa-times" style="color: red;" aria-hidden="true"></i></td>
@@ -137,6 +153,7 @@
 						</tr>
 						<tr>
 							<td>Soporte IMAP</td>
+							<td class="feat"><i class="fa fa-times" style="color: red;" aria-hidden="true"></i></td>
 							<td><i class="fa fa-check" style="color: green;" aria-hidden="true"></i></td>
 							<td><i class="fa fa-check" style="color: green;" aria-hidden="true"></i></td>
 							<td><i class="fa fa-check" style="color: green;" aria-hidden="true"></i> (Requiere num telefono para 2FA)</td>
@@ -145,6 +162,7 @@
 						</tr>
 						<tr>
 							<td>Soporte SMTP</td>
+							<td class="feat"><i class="fa fa-times" style="color: red;" aria-hidden="true"></i></td>
 							<td><i class="fa fa-check" style="color: green;" aria-hidden="true"></i></td>
 							<td><i class="fa fa-check" style="color: green;" aria-hidden="true"></i></td>
 							<td><i class="fa fa-check" style="color: green;" aria-hidden="true"></i> (Requiere num telefono para 2FA)</td>
@@ -153,6 +171,7 @@
 						</tr>
 						<tr>
 							<td>Criptografía (TLS)</td>
+							<td class="feat"><i class="fa fa-times" style="color: red;" aria-hidden="true"></i></td>
 							<td><i class="fa fa-check" style="color: green;" aria-hidden="true"></i></td>
 							<td><i class="fa fa-check" style="color: green;" aria-hidden="true"></i></td>
 							<td><i class="fa fa-check" style="color: green;" aria-hidden="true"></i></td>
@@ -161,6 +180,7 @@
 						</tr>
 						<tr>
 							<td>Expiración de Cuenta</td>
+							<td class="feat">2010</td>
 							<td>9 Meses (Inactividad)</td>
 							<td>270 Días</td>
 							<td>Nunca</td>
@@ -169,6 +189,7 @@
 						</tr>
 						<tr>
 							<td>Opción Dominio Propio</td>
+							<td class="feat"><i class="fa fa-times" style="color: red;" aria-hidden="true"></i></td>
 							<td><i class="fa fa-check" style="color: green;" aria-hidden="true"></i></td>
 							<td><i class="fa fa-check" style="color: green;" aria-hidden="true"></i> (Solo premium)</td>
 							<td><i class="fa fa-times" style="color: red;" aria-hidden="true"></i></td>
@@ -177,6 +198,7 @@
 						</tr>
 						<tr>
 							<td>Opción Creación Cuenta</br>Sin Verificación</td>
+							<td class="feat"><i class="fa fa-times" style="color: red;" aria-hidden="true"></i></td>
 							<td><i class="fa fa-times" style="color: red;" aria-hidden="true"></i></td>
 							<td><i class="fa fa-times" style="color: red;" aria-hidden="true"></i></td>
 							<td><i class="fa fa-times" style="color: red;" aria-hidden="true"></i></td>
@@ -185,6 +207,7 @@
 						</tr>
 						<tr>
 							<td id="features">Reenvío Automático</td>
+							<td class="feat"><i class="fa fa-times" style="color: red;" aria-hidden="true"></i></td>
 							<td><i class="fa fa-check" style="color: green;" aria-hidden="true"></i></td>
 							<td><i class="fa fa-check" style="color: green;" aria-hidden="true"></i></td>
 							<td><i class="fa fa-check" style="color: green;" aria-hidden="true"></i></td>
@@ -193,6 +216,7 @@
 						</tr>
 						<tr>
 							<td>Virus Scan</td>
+							<td class="feat"><i class="fa fa-times" style="color: red;" aria-hidden="true"></i></td>
 							<td><i class="fa fa-check" style="color: green;" aria-hidden="true"></i></td>
 							<td><i class="fa fa-check" style="color: green;" aria-hidden="true"></i></td>
 							<td><i class="fa fa-check" style="color: green;" aria-hidden="true"></i></td>
@@ -201,6 +225,7 @@
 						</tr>
 						<tr>
 							<td>"De:" Personalizado</td>
+							<td class="feat"><i class="fa fa-check" style="color: green;" aria-hidden="true"></i></td>
 							<td><i class="fa fa-check" style="color: green;" aria-hidden="true"></i></td>
 							<td><i class="fa fa-check" style="color: green;" aria-hidden="true"></i></td>
 							<td><i class="fa fa-check" style="color: green;" aria-hidden="true"></i></td>
@@ -269,6 +294,14 @@
 			}
 		}
 
+		function hideYandex(){
+			$('.yandex').hide();
+		}
+
+		function hideProton(){
+			$('.proton').hide();
+		}
+
 		function showYandex(){
 			$('.yandex').show();
 		}
@@ -278,6 +311,8 @@
 		}
 
 		</script>
+
+
 
 
 	</body>
